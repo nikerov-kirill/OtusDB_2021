@@ -30,3 +30,7 @@
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | products_pk | product_id | |
 | FOREIGN KEY | products_fk | category_id | `categories` |
+| FOREIGN KEY | products_fk_1 | suplier_id | `supliers` |
+| FOREIGN KEY | products_fk_2 | producer_id | `producers` |
+| FOREIGN KEY | products_fk_4 | brand_id | `brands` |
+| FOREIGN KEY | products_fk_5 | style_id | `styles` |
