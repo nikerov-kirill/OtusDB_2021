@@ -5,6 +5,9 @@
 
 [Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/ShopScheme.png)
 
+### Таблица - "products"
+Содержит информацию о товарах
+
 | Syntax | Description |
 | --- | ----------- |
 | Header | Title |
