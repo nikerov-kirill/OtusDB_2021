@@ -124,3 +124,26 @@
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | prices_pk | product_id | |
 | FOREIGN KEY | prices_fk | product_id | `products` |
+
+## Таблица - `employees`
+Содержит информацию о работниках интернет-магазина
+##### Колонки таблицы `employees`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ---- |
+| 1 | employee_id | serial | ID сотрудника (Primary key) | + |
+| 2 | first_name | varchar | Имя сотрудника | + |
+| 3 | last_name | varchar | Фамилия сотрудника | + |
+| 4 | second_name | varchar | Отчество сотрудника | + |
+| 5 | main_phone | varchar | Основной телефон сотрудника | + |
+| 6 | additional_phone | varchar | Дополнительный телефон сотрудника | - |
+| 7 | email | varchar | Email сотрудника (Unique key) | + |
+| 8 | role_id | int | Роль сотрудника (Ссылка) | + |
+| 9 | active | bool | Активность сотрудника (работает или уволен) | + |
+| 10 | city_id | int | Город сотрудника (Ссылка) | - |
+##### Ограничения таблицы `employees`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | users_pk | employee_id | |
+| UNIQUE KEY | users_un | email | |
+| FOREIGN KEY | employees_fk | city_id | `cities` |
+| FOREIGN KEY | users_fk | role_id | `roles` |
