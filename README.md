@@ -3,4 +3,4 @@
 - добавления товара в корзину
 - создание административной панели для редактирования списков категорий товаров, товаров, поставщиков, производителей
 
-[Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/MyShopScheme.jpg)
+[Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/ShopScheme.png)
