@@ -84,3 +84,29 @@
 | PRIMARY KEY | producers_pk | producer_id | |
 | UNIQUE KEY | producers_un | email | |
 | FOREIGN KEY | producers_fk | address_id | `addresses` |
+
+## Таблица - `brands`
+Содержит информацию о брендах
+##### Колонки таблицы `brands`
+| № | Название | Тип данных | Описание |
+| -- | --- | ----------- | ----- |
+| 1 | brand_id | serial | ID бренда (Primary key) |
+| 2 | brand_name | varchar | Название бренда |
+| 3 | description | text | Описание бренда |
+##### Ограничения таблицы `brands`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | brands_pk | brand_id | |
+
+## Таблица - `styles`
+Содержит информацию о стилях пива и пивных напитков
+##### Колонки таблицы `styles`
+| № | Название | Тип данных | Описание |
+| -- | --- | ----------- | ----- |
+| 1 | style_id | serial | ID бренда (Primary key) |
+| 2 | style_name | varchar | Название стиля |
+| 3 | description | text | Описание стиля |
+##### Ограничения таблицы `styles`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | styles_pk | style_id | |
