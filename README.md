@@ -26,6 +26,7 @@
 | 12 | capacity_type | varchar | Тип ёмкости |
 | 13 | active | bool | Активность товара |
 ##### Ограничения таблицы `products`
-| Тип ограничения | Название | Поле |
-| -- | --- | ----------- |
-| PRIMARY KEY | products_pk | product_id |
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | products_pk | product_id | |
+| FOREIGN KEY | products_fk | category_id | `categories` |
