@@ -12,7 +12,7 @@
 ##### Колонки таблицы `products`
 | № | Название | Тип данных | Описание |
 | -- | --- | ----------- | ----- |
-| 1 | product_id | bigserial | ID товара |
+| 1 | product_id | bigserial | ID товара (Primary key) |
 | 2 | name | varchar | Название товара |
 | 3 | description | text | Описание товара |
 | 4 | category_id | int | ID категории |
@@ -25,3 +25,7 @@
 | 11 | color | varchar | Цвет напитка |
 | 12 | capacity_type | varchar | Тип ёмкости |
 | 13 | active | bool | Активность товара |
+##### Ограничения таблицы `products`
+| Тип ограничения | Название | Поле |
+| -- | --- | ----------- |
+| PRIMARY KEY | products_pk | product_id |
