@@ -14,11 +14,11 @@
 | 1 | product_id | bigserial | ID товара (Primary key) |
 | 2 | name | varchar | Название товара |
 | 3 | description | text | Описание товара |
-| 4 | category_id | int | ID категории |
-| 5 | suplier_id | bigint | ID поставщика |
-| 6 | producer_id | int | ID производителя |
-| 7 | brand_id | int | Бренд товара |
-| 8 | style_id | int | Стиль напитка |
+| 4 | category_id | int | Категория товара (ссылка) |
+| 5 | suplier_id | bigint | Поставщик товара (ссылка) |
+| 6 | producer_id | int | Производитель товара (сссылка) |
+| 7 | brand_id | int | Бренд товара (ссылка) |
+| 8 | style_id | int | Стиль напитка (ссылка) |
 | 9 | density | varchar | Плотность напитка |
 | 10 | fortress | varchar | Крепость напитка |
 | 11 | color | varchar | Цвет напитка |
@@ -55,7 +55,7 @@
 | -- | --- | ----------- | ----- |
 | 1 | suplier_id | bigserial | ID поставщика (Primary key) |
 | 2 | name | varchar | Название поставщика |
-| 3 | address_id | int | ID адреса |
+| 3 | address_id | int | Адрес поставщика (ссылка) |
 | 4 | description | text | Описание поставщика |
 | 5 | email | varchar | Email поставщика (Unique key) |
 | 6 | main_phone | varchar | Основной телефон поставщика |
@@ -65,3 +65,22 @@
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | supliers_pk | suplier_id | |
 | UNIQUE KEY | supliers_un | email | |
+| FOREIGN KEY | supliers_fk | address_id | `addresses` |
+
+## Таблица - `producers`
+Содержит информацию о производителях
+##### Колонки таблицы `producers`
+| № | Название | Тип данных | Описание |
+| -- | --- | ----------- | ----- |
+| 1 | producer_id | serial | ID производителя (Primary key) |
+| 2 | name | varchar | Название производителя |
+| 3 | address_id | int | Адрес производителя (ссылка) |
+| 4 | main_phone | varchar | Основной телефон производителя |
+| 5 | additional_phone | varchar | Дополнительный телефон производителя |
+| 6 | email | varchar | Email производителя (Unique key) |
+##### Ограничения таблицы `producers`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | producers_pk | producer_id | |
+| UNIQUE KEY | producers_un | email | |
+| FOREIGN KEY | producers_fk | address_id | `addresses` |
