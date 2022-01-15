@@ -8,7 +8,6 @@
 ## Документация базы данных интернет-магазина крафтового пива
 ##### Таблица - `products`
 Содержит информацию о товарах
-
 ##### Колонки таблицы `products`
 | № | Название | Тип данных | Описание |
 | -- | --- | ----------- | ----- |
@@ -34,3 +33,17 @@
 | FOREIGN KEY | products_fk_2 | producer_id | `producers` |
 | FOREIGN KEY | products_fk_4 | brand_id | `brands` |
 | FOREIGN KEY | products_fk_5 | style_id | `styles` |
+
+##### Таблица - `categories`
+Содержит информацию о товарах
+##### Колонки таблицы `categories`
+| № | Название | Тип данных | Описание |
+| -- | --- | ----------- | ----- |
+| 1 | category_id | serial | ID категории (Primary key) |
+| 2 | name | varchar | Название категории |
+| 3 | description | text | Описание категории |
+| 4 | active | bool | Активность категории |
+##### Ограничения таблицы `categories`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | categories_pk | category_id | |
