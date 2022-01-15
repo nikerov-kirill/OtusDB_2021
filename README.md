@@ -5,10 +5,11 @@
 
 [Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/ShopScheme.png)
 
-### Таблица - "products"
+## Документация
+##### Таблица - "products"
 Содержит информацию о товарах
 
-| Syntax | Description |
-| --- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| № | Название | Тип данных | Описание |
+| -- | --- | ----------- |
+| 1 | product_id | bigserial | ID товара |
+| 2 | name | varchar | Название товара |
