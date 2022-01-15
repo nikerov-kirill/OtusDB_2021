@@ -6,7 +6,7 @@
 [Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/ShopScheme.png)
 
 ## Документация базы данных интернет-магазина крафтового пива
-##### Таблица - `products`
+## Таблица - `products`
 Содержит информацию о товарах
 ##### Колонки таблицы `products`
 | № | Название | Тип данных | Описание |
@@ -34,7 +34,7 @@
 | FOREIGN KEY | products_fk_4 | brand_id | `brands` |
 | FOREIGN KEY | products_fk_5 | style_id | `styles` |
 
-##### Таблица - `categories`
+## Таблица - `categories`
 Содержит информацию о товарах
 ##### Колонки таблицы `categories`
 | № | Название | Тип данных | Описание |
