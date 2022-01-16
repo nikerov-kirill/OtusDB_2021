@@ -177,3 +177,18 @@
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | customers_pk | customer_id | |
 | UNIQUE KEY | customers_un | email | |
+
+## Таблица - `sales`
+Содержит информацию о продажах товаров
+##### Колонки таблицы `sales`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- |
+| 1 | sale_id | bigserial | ID продажи (Primary key) | + |
+| 2 | product_id | bigint | ID товара (Ссылка) | + |
+| 3 | customer_id | int | ID покупателя (Ссылка) | + |
+| 4 | amount | numeric | Количество товаров | + |
+| 5 | date_created | timestamp | Дата создания | + |
+##### Ограничения таблицы `sales`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | sales_pk | sale_id | |
