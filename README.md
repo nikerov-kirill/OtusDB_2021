@@ -147,3 +147,15 @@
 | UNIQUE KEY | users_un | email | |
 | FOREIGN KEY | employees_fk | city_id | `cities` |
 | FOREIGN KEY | users_fk | role_id | `roles` |
+
+## Таблица - `roles`
+Содержит информацию о ролях сотрудников
+##### Колонки таблицы `roles`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- |
+| 1 | role_id | serial | ID роли (Primary key) | + |
+| 2 | role_name | varchar | Название роли | + |
+##### Ограничения таблицы `roles`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | roles_pk | role_id | |
