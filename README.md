@@ -3,7 +3,7 @@
 - добавления товара в корзину
 - создание административной панели для редактирования списков категорий товаров, товаров, поставщиков, производителей
 
-[Ссылка на схему](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DBScheme.png)
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DBScheme.png)
 
 ## Документация базы данных интернет-магазина крафтового пива
 ## Таблица - `products`
