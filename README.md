@@ -192,3 +192,46 @@
 | Тип ограничения | Название | Поле | Связанная сущность |
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | sales_pk | sale_id | |
+
+## Таблица - `addresses`
+Содержит информацию об адресах
+##### Колонки таблицы `addresses`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- |
+| 1 | address_id | bigserial | ID адреса (Primary key) | + |
+| 2 | street | varchar | Улица | + |
+| 3 | city_id | bigint | ID города (Ссылка) | + |
+| 4 | disctrict | varchar | Район | + |
+| 5 | address_code | varchar | Индекс | + |
+| 6 | phone | varchar | Телефон | + |
+##### Ограничения таблицы `addresses`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | addresses_pk | address_id | |
+| FOREIGN KEY | addresses_fk | city_id | `cities` |
+
+## Таблица - `cities`
+Содержит информацию о городах
+##### Колонки таблицы `cities`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- |
+| 1 | city_id | serial | ID города (Primary key) | + |
+| 2 | city_name | varchar | Название города | + |
+| 3 | country_id | serial | ID страны (Ссылка) | + |
+##### Ограничения таблицы `cities`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | cities_pk | city_id | |
+| FOREIGN KEY | cities_fk | country_id | `countries` |
+
+## Таблица - `countries`
+Содержит информацию о странах
+##### Колонки таблицы `countries`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- |
+| 1 | country_id | serial | ID страны (Primary key) | + |
+| 2 | country_name | varchar | Название страны | + |
+##### Ограничения таблицы `countries`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | countries_pk | country_id | |
