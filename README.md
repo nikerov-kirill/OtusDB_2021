@@ -159,3 +159,21 @@
 | Тип ограничения | Название | Поле | Связанная сущность |
 | -- | --- | ----------- | ---- |
 | PRIMARY KEY | roles_pk | role_id | |
+
+## Таблица - `customers`
+Содержит информацию о покупателях интернет-магазина
+##### Колонки таблицы `customers`
+| № | Название | Тип данных | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ---- |
+| 1 | customer_id | bigserial | ID покупателя (Primary key) | + |
+| 2 | first_name | varchar | Имя сотрудника | + |
+| 3 | last_name | varchar | Фамилия сотрудника | + |
+| 4 | second_name | varchar | Отчество сотрудника | + |
+| 5 | main_phone | varchar | Основной телефон сотрудника | + |
+| 6 | additional_phone | varchar | Дополнительный телефон сотрудника | - |
+| 7 | email | varchar | Email сотрудника (Unique key) | + |
+##### Ограничения таблицы `customers`
+| Тип ограничения | Название | Поле | Связанная сущность |
+| -- | --- | ----------- | ---- |
+| PRIMARY KEY | customers_pk | customer_id | |
+| UNIQUE KEY | customers_un | email | |
