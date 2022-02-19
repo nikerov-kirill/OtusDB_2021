@@ -1,1 +1,3 @@
-1. CREATE DATABASE my_shop; - создаем базу данных my_shop
+1. ### Создать базу данных my_shop
+    CREATE DATABASE my_shop;
+2. ### Создать схему
