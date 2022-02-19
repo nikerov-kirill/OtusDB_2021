@@ -1,3 +1,4 @@
 1. #### Создать базу данных my_shop
     CREATE DATABASE my_shop;
+    ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DDL%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20postgres/createDB.png)
 2. #### Создать схему
