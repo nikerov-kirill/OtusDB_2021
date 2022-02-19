@@ -4,3 +4,6 @@
 2. #### Создать новую роль с правами суперпользователя, возможностью создавать базу данных и роли
     CREATE ROLE master_elephant WITH LOGIN SUPERUSER CREATEDB CREATEROLE PASSWORD 'password';
     ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DDL%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20postgres/createRole.png)
+3. #### Выбрать созданную роль
+    SET ROLE master_elephant;
+    ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DDL%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20postgres/currentUser.png)
