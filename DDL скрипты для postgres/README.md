@@ -20,18 +20,19 @@
 
 ### Приступаем к созданию таблиц
 - Таблица `products`
-    CREATE TABLE products.products (
-        id serial NOT NULL CONSTRAINT pk_products PRIMARY KEY,
-        name varchar NOT NULL,
-        description text NOT NULL,
-        category_id int4 NOT NULL,
-        suplier_id int4 NOT NULL,
-        producer_id int4 NOT NULL,
-        brand_id int4 NOT NULL,
-        density varchar NULL,
-        fortress varchar NULL,
-        color varchar NULL,
-        capacity_type varchar NULL,
-        style_id int4 NULL,
-        active bool NULL
-     );
+    CREATE TABLE products.products (  
+        id serial NOT NULL CONSTRAINT pk_products PRIMARY KEY,  
+        name varchar NOT NULL,  
+        description text NOT NULL,  
+        category_id int4 NOT NULL,  
+        suplier_id int4 NOT NULL,  
+        producer_id int4 NOT NULL,  
+        brand_id int4 NOT NULL,  
+        density varchar NULL,  
+        fortress varchar NULL,  
+        color varchar NULL,  
+        capacity_type varchar NULL,  
+        style_id int4 NULL,  
+        active bool NULL  
+     );  
+     
