@@ -17,3 +17,21 @@
     ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DDL%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20%D0%B4%D0%BB%D1%8F%20postgres/newOwner.png)
 6. #### Установить новое табличное пространство по умолчанию
     SET default_tablespace = shop_ts;
+
+### Приступаем к созданию таблиц
+- Таблица `products`
+    CREATE TABLE products.products (
+        id serial NOT NULL CONSTRAINT pk_products PRIMARY KEY,
+        name varchar NOT NULL,
+        description text NOT NULL,
+        category_id int4 NOT NULL,
+        suplier_id int4 NOT NULL,
+        producer_id int4 NOT NULL,
+        brand_id int4 NOT NULL,
+        density varchar NULL,
+        fortress varchar NULL,
+        color varchar NULL,
+        capacity_type varchar NULL,
+        style_id int4 NULL,
+        active bool NULL
+     );
