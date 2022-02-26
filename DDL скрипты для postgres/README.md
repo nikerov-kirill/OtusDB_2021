@@ -73,4 +73,13 @@ description text NULL);
 product_id int NOT NULL,  
 sale_price numeric NOT NULL, 
 suplier_price numeric NOT NULL);  
+
+### Добавляем внешние ключи
+- Таблица `products`
+ALTER TABLE products.products ADD CONSTRAINT fk_categories FOREIGN KEY (category_id) REFERENCES products.categories (id) MATCH FULL;  
+ALTER TABLE products.products ADD CONSTRAINT fk_supliers FOREIGN KEY (suplier_id) REFERENCES products.supliers (id) MATCH FULL;  
+ALTER TABLE products.products ADD CONSTRAINT fk_producers FOREIGN KEY (producer_id) REFERENCES products.producers (id) MATCH FULL;  
+ALTER TABLE products.products ADD CONSTRAINT fk_brands FOREIGN KEY (brand_id) REFERENCES products.brands (id) MATCH FULL;  
+ALTER TABLE products.products ADD CONSTRAINT fk_styles FOREIGN KEY (style_id) REFERENCES products.styles (id) MATCH FULL;
+
      
