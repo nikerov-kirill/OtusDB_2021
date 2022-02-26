@@ -58,4 +58,19 @@ address_id int NOT NULL,
 main_phone varchar NOT NULL,  
 additional_phone varchar NULL,  
 email varchar NOT NULL CONSTRAINT uk_producer_email UNIQUE);  
+- Таблица `brands`
+    CREATE TABLE products.brands (  
+id serial NOT NULL CONSTRAINT pk_brands PRIMARY KEY,  
+name varchar NOT NULL,  
+description text NULL);  
+- Таблица `styles`
+    CREATE TABLE products.styles (  
+id serial NOT NULL CONSTRAINT pk_styles PRIMARY KEY,  
+name varchar NOT NULL,  
+description text NULL);  
+- Таблица `prices`
+    CREATE TABLE products.prices (  
+product_id int NOT NULL,  
+sale_price numeric NOT NULL, 
+suplier_price numeric NOT NULL);  
      
