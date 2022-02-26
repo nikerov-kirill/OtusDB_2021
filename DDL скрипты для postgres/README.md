@@ -90,7 +90,39 @@ country_id int NOT NULL);
     CREATE TABLE addresses.countries (  
 id serial NOT NULL CONSTRAINT pk_countries PRIMARY KEY,  
 name varchar NOT NULL);  
-
+- Таблица `sales`  
+    CREATE TABLE sales.sales (  
+id bigserial NOT NULL CONSTRAINT pk_sales PRIMARY KEY,  
+product_id int NOT NULL,  
+customer_id int NOT NULL,  
+amount int NOT NULL,  
+date_created timestamp NOT NULL);  
+- Таблица `customers`
+    CREATE TABLE sales.customers (  
+id serial NOT NULL CONSTRAINT pk_customers PRIMARY KEY,  
+first_name varchar NOT NULL,  
+last_name varchar NOT NULL,  
+second_name varchar NOT NULL,  
+main_phone varchar NOT NULL,  
+additional_phone varchar NULL,  
+email varchar NOT NULL CONSTRAINT uk_customer_email UNIQUE  
+);
+- Таблица `roles`
+    CREATE TABLE employees.roles (  
+id int NOT NULL CONSTRAINT pk_role PRIMARY KEY,  
+name varchar NOT NULL);  
+- Таблица `employees`
+    CREATE TABLE employees.employees (  
+id serial NOT NULL CONSTRAINT pk_employees PRIMARY KEY,  
+first_name varchar NOT NULL,  
+last_name varchar NOT NULL,  
+second_name varchar NOT NULL,  
+main_phone varchar NOT NULL,  
+additional_phone varchar NULL,  
+email varchar NOT NULL CONSTRAINT uk_employee_email UNIQUE,  
+role_id int NOT NULL,  
+city_id int NOT NULL,  
+active bool NOT NULL);  
 
 ### Добавляем внешние ключи
 - Таблица `products`  
@@ -107,6 +139,9 @@ ALTER TABLE products.producers ADD CONSTRAINT fk_address FOREIGN KEY (address_id
 ALTER TABLE addresses.addresses ADD CONSTRAINT fk_city FOREIGN KEY (city_id) REFERENCES addresses.cities (id) MATCH FULL;
 - Таблица `cities`
 ALTER TABLE addresses.cities ADD CONSTRAINT fk_country FOREIGN KEY (country_id) REFERENCES addresses.countries (id) MATCH FULL;
+- Таблица `sales`
+ALTER TABLE sales.sales ADD CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products.products (id) MATCH FULL;  
+ALTER TABLE sales.sales ADD CONSTRAINT fk_customers FOREIGN KEY (customer_id) REFERENCES sales.customers (id) MATCH FULL;
 
 
 
