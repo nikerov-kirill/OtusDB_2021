@@ -99,6 +99,15 @@ ALTER TABLE products.products ADD CONSTRAINT fk_supliers FOREIGN KEY (suplier_id
 ALTER TABLE products.products ADD CONSTRAINT fk_producers FOREIGN KEY (producer_id) REFERENCES products.producers (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_brands FOREIGN KEY (brand_id) REFERENCES products.brands (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_styles FOREIGN KEY (style_id) REFERENCES products.styles (id) MATCH FULL;
+- Таблица  `supliers`  
+ALTER TABLE products.supliers ADD CONSTRAINT fk_address FOREIGN KEY (address_id) REFERENCES addresses.addresses (id) MATCH FULL;
+- Таблица  `producers`  
+ALTER TABLE products.producers ADD CONSTRAINT fk_address FOREIGN KEY (address_id) REFERENCES addresses.addresses (id) MATCH FULL;
+- Таблица `addresses`  
+ALTER TABLE addresses.addresses ADD CONSTRAINT fk_city FOREIGN KEY (city_id) REFERENCES addresses.cities (id) MATCH FULL;
+- Таблица `cities`
+ALTER TABLE addresses.cities ADD CONSTRAINT fk_country FOREIGN KEY (country_id) REFERENCES addresses.countries (id) MATCH FULL;
+
 
 
      
