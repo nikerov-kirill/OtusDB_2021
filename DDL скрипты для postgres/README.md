@@ -137,11 +137,13 @@ ALTER TABLE products.supliers ADD CONSTRAINT fk_address FOREIGN KEY (address_id)
 ALTER TABLE products.producers ADD CONSTRAINT fk_address FOREIGN KEY (address_id) REFERENCES addresses.addresses (id) MATCH FULL;
 - Таблица `addresses`  
 ALTER TABLE addresses.addresses ADD CONSTRAINT fk_city FOREIGN KEY (city_id) REFERENCES addresses.cities (id) MATCH FULL;
-- Таблица `cities`
+- Таблица `cities`  
 ALTER TABLE addresses.cities ADD CONSTRAINT fk_country FOREIGN KEY (country_id) REFERENCES addresses.countries (id) MATCH FULL;
-- Таблица `sales`
+- Таблица `sales`  
 ALTER TABLE sales.sales ADD CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products.products (id) MATCH FULL;  
 ALTER TABLE sales.sales ADD CONSTRAINT fk_customers FOREIGN KEY (customer_id) REFERENCES sales.customers (id) MATCH FULL;
+- Таблица `employees`  
+ALTER TABLE employees.employees ADD CONSTRAINT fk_roles FOREIGN KEY (role_id) REFERENCES employees.roles (id) MATCH FULL;
 
 
 
