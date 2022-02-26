@@ -35,10 +35,27 @@
         style_id int4 NULL,  
         active bool NULL  
      );  
- - Таблица `categories`  
+- Таблица `categories`  
     CREATE TABLE products.categories (  
         id serial NOT NULL CONSTRAINT pk_categories PRIMARY KEY,  
         name varchar NOT NULL,  
         description text NULL,  
         active bool NOT NULL);  
+- Таблица `supliers`  
+    CREATE TABLE products.supliers (  
+id serial NOT NULL CONSTRAINT pk_supliers PRIMARY KEY,  
+name varchar NOT NULL,  
+address_id int NOT NULL,  
+description text NULL,  
+email varchar NOT NULL CONSTRAINT uk_suplier_email UNIQUE,  
+main_phone varchar NOT NULL,  
+additional_phone varchar NULL);  
+- Таблица `producers`
+    CREATE TABLE products.producers (  
+id serial NOT NULL CONSTRAINT pk_producers PRIMARY KEY,  
+name varchar NOT NULL,  
+address_id int NOT NULL,  
+main_phone varchar NOT NULL,  
+additional_phone varchar NULL,  
+email varchar NOT NULL CONSTRAINT uk_producer_email UNIQUE);  
      
