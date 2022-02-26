@@ -73,13 +73,32 @@ description text NULL);
 product_id int NOT NULL,  
 sale_price numeric NOT NULL, 
 suplier_price numeric NOT NULL);  
+- Таблица `addresses`
+    CREATE TABLE addresses.addresses (  
+id bigserial NOT NULL CONSTRAINT pk_addresses PRIMARY KEY,  
+street varchar NOT NULL,  
+city_id bigint NOT NULL,  
+disctrict varchar NOT NULL,  
+address_code varchar NOT NULL,  
+phone varchar NOT NULL);  
+- Таблица `cities`  
+    CREATE TABLE addresses.cities (  
+id bigserial NOT NULL CONSTRAINT pk_cities PRIMARY KEY,  
+name varchar NOT NULL,  
+country_id int NOT NULL);  
+- Таблица `countires`  
+    CREATE TABLE addresses.countries (  
+id serial NOT NULL CONSTRAINT pk_countries PRIMARY KEY,  
+name varchar NOT NULL);  
+
 
 ### Добавляем внешние ключи
-- Таблица `products`
+- Таблица `products`  
 ALTER TABLE products.products ADD CONSTRAINT fk_categories FOREIGN KEY (category_id) REFERENCES products.categories (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_supliers FOREIGN KEY (suplier_id) REFERENCES products.supliers (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_producers FOREIGN KEY (producer_id) REFERENCES products.producers (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_brands FOREIGN KEY (brand_id) REFERENCES products.brands (id) MATCH FULL;  
 ALTER TABLE products.products ADD CONSTRAINT fk_styles FOREIGN KEY (style_id) REFERENCES products.styles (id) MATCH FULL;
+
 
      
