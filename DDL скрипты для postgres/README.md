@@ -144,6 +144,8 @@ ALTER TABLE sales.sales ADD CONSTRAINT fk_products FOREIGN KEY (product_id) REFE
 ALTER TABLE sales.sales ADD CONSTRAINT fk_customers FOREIGN KEY (customer_id) REFERENCES sales.customers (id) MATCH FULL;
 - Таблица `employees`  
 ALTER TABLE employees.employees ADD CONSTRAINT fk_roles FOREIGN KEY (role_id) REFERENCES employees.roles (id) MATCH FULL;
+- Таблица `prices`  
+ALTER TABLE products.prices ADD CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products.products (id) MATCH FULL;
 
 
 
