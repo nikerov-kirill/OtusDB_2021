@@ -35,7 +35,7 @@
         style_id int4 NULL,  
         active bool NULL  
      );  
-  - Таблица `categories`  
+ - Таблица `categories`  
     CREATE TABLE products.categories (  
         id serial NOT NULL CONSTRAINT pk_categories PRIMARY KEY,  
         name varchar NOT NULL,  
