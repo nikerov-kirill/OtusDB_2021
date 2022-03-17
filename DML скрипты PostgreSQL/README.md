@@ -1,13 +1,5 @@
 #### Напишите запрос по своей базе с использованием LEFT JOIN и INNER JOIN, как порядок соединений в FROM влияет на результат? Почему?
-
-select  
- sv.name_en as "Название сорта (en)",  
- sv.name_ru as "Название сорта (ru)",  
- gv."name" as "Название группы",  
- hv.name_en as "Категория (en)",  
- hv.name_ru as "Категория (ru)"  
-from sub_varieties sv  
-left join group_varieties gv on (sv.group_variety = gv.id)  
-left join head_varieties hv on (gv.head_variety = hv.id)  
+Запрос с использованием LEFT JOIN
+!()[https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DML%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20PostgreSQL/2q.png]
 
 
