@@ -13,4 +13,6 @@
 #### 4. Напишите запрос с обновлением данные используя UPDATE FROM.
 Обновим поле название в таблице `warehouse` для элементов, у которых значение alcohol_max меньше 5 из таблицы `sub_varieties`
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DML%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20PostgreSQL/4q.png)
-
+#### 5. Напишите запрос для удаления данных с оператором DELETE используя join с другой таблицей с помощью using.
+Удалим из таблицы `warehouse` элементы используя таблицу `sub_varieties` в которой значение ibu_max = 8
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DML%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D1%8B%20PostgreSQL/5q.png)
