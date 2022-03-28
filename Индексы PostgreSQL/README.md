@@ -34,6 +34,19 @@ create index on sub_varieties(group_variety);
 ###### Результат:  
   Происходит полное сканирование таблицы. По всей видимости, планировщик не считает использование индекса оптимальным решением. Или же я что-то сделал не так :)  
   ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20PostgreSQL/Screenshot_2.png)  
+##### 4. Реализовать индекс на часть таблицы или индекс на поле с функцией  
+Создаем индекс по полю `alcohol_max` таблицы `sub_varieties` только для тех строк, где значение alcohol_max < 7  
+###### Запрос:  
+create index middle_alco_sub_varieties_idx on sub_varieties (alcohol_max)  
+where alcohol_max < 7  
+###### Результат:  
+  Результат аналогичен предыдущему пункту. Индекс не применяется.  
+  ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20PostgreSQL/Screenshot_3.png)  
+##### 5. Создать индекс на несколько полей  
+
+
+
+
   
 
 
