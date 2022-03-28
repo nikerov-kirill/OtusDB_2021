@@ -43,7 +43,20 @@ where alcohol_max < 7
   Результат аналогичен предыдущему пункту. Индекс не применяется.  
   ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20PostgreSQL/Screenshot_3.png)  
 #### 5. Создать индекс на несколько полей  
-
+  Создаем индекс по двум полям `ibu_max`, `ibu_min`  
+  create index ibu_sub_varieties_idx on sub_varieties (ibu_max, ibu_min);  
+###### Запрос:  
+  explain (costs, verbose, format json, analyse)  
+  select name_ru  
+  from sub_varieties sv  
+  left join group_varieties gv on (sv.group_variety = gv.id)  
+  where sv.ibu_min > 20  
+  and sv.ibu_max < 50   
+  and gv.head_variety = 2  
+###### Результат:  
+  Индекс не применяется. 
+  ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20PostgreSQL/Screenshot_4.png)  
+  
 
 
 
