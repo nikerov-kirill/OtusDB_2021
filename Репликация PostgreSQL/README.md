@@ -20,5 +20,5 @@ systemctl start postgresql.service
 - На мастере создаем новую таблицу, добавляем туда данные и проверяем наличие на ведомом сервере  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_1.png)  
 
-- Данный параметр показывает, что машина находится в физической репликации  
+- Данный параметр показывает, что машина находится в режиме физической репликации  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_5.png)  
