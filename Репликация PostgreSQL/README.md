@@ -36,7 +36,9 @@ sudo nano /etc/postgresql/12/main/pg_hba.conf
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_10.png)  
 
 ### Логическая репликация
-1. На публикующем сервере прописываем параметр `wal_level`  
+
+#### Публикующий сервер  
+1. Прописываем параметр `wal_level`  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_11.png)  
 2. Создаем новую базу данных и таблицу  
   CREATE DATABASE logical_replica;  
@@ -44,5 +46,10 @@ sudo nano /etc/postgresql/12/main/pg_hba.conf
 3. Создаем публикацию для данной таблицы  
   CREATE PUBLICATION test_publication FOR TABLE test;  
   ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_12.png)  
+#### Сервер подписчик  
+1. Создаем подписку на публикацию  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_13.png)  
+2. Проверяем наличие подписки  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A0%D0%B5%D0%BF%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%20PostgreSQL/Screenshot_14.png)  
   
   
