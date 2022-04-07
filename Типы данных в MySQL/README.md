@@ -35,8 +35,7 @@
 | 3 | address_id | int | int | -- | Адрес поставщика (ссылка) | + |
 | 4 | description | text | text | -- | Описание поставщика | - |
 | 5 | contacts | -- | JSON | Замена на JSON  | Контакты поставщика | - |
-
-`Колонки удалены`
+| - | Удалены | -- | -- | -- | -- | -- |
 | 5 | email | varchar | text | Замена на JSON | Email поставщика (Unique key) | + |
 | 6 | main_phone | varchar | text | Замена на JSON | Основной телефон поставщика | + |
 | 7 | additional_phone | varchar | text | Замена на JSON  | Дополнительный телефон поставщика | - |
