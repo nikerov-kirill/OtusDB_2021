@@ -5,27 +5,26 @@
 
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DBScheme.png)
 
-```diff
 ## Документация базы данных интернет-магазина крафтового пива
 ## Таблица - `products`
 Содержит информацию о товарах
 ##### Колонки таблицы `products`
 | № | Название | Тип данных (старый) | Тип данных (новый) | Причина замены | Описание | Not NULL |
 | -- | --- | ----------- | ----- | ----- | ---- | ---- |
-| 1 | product_id | bigserial | + serial + | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
-| 2 | name | varchar | <span style="color:green">varchar(255)</span> | Точно указываем длину строки | Название товара | + |
-| 3 | description | text | <span style="color:red">text</span> | -- | Описание товара | - |
-| 4 | category_id | int | <span style="color:red">int</span> | -- |Категория товара (ссылка) | + |
-| 5 | suplier_id | bigint | <span style="color:green">int</span> | Нет необходимости брать настолько большое число | Поставщик товара (ссылка) | + |
-| 6 | producer_id | int | <span style="color:red">int</span> | -- | Производитель товара (сссылка) | + |
-| 7 | brand_id | int | <span style="color:red">int</span> | -- | Бренд товара (ссылка) | + |
-| 8 | style_id | int | <span style="color:red">int</span> | -- | Стиль напитка (ссылка) | + |
-| 9 | density | varchar | <span style="color:green">double(4,2)</span> | Число с точность до сотых долей, не превышающее 100 | Плотность напитка | - |
-| 10 | fortress | varchar | <span style="color:green">double(4,2)</span> | Число с точность до сотых долей, не превышающее 100 | Крепость напитка | - |
-| 11 | color | varchar | <span style="color:green">int</span> | Введен отдельный словарь цветов | Цвет напитка | - |
-| 12 | container_type | varchar | <span style="color:green">int</span> | Введен отдельный словарь тары | Тип ёмкости | - |
-| 13 | active | bool | <span style="color:red">bool</span> | -- | Активность товара | - |
-```
+| 1 | product_id | bigserial | serial | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
+| 2 | name | varchar | varchar(255) | Точно указываем длину строки | Название товара | + |
+| 3 | description | text | text | -- | Описание товара | - |
+| 4 | category_id | int | int | -- |Категория товара (ссылка) | + |
+| 5 | suplier_id | bigint | int | Нет необходимости брать настолько большое число | Поставщик товара (ссылка) | + |
+| 6 | producer_id | int | int | -- | Производитель товара (сссылка) | + |
+| 7 | brand_id | int | int | -- | Бренд товара (ссылка) | + |
+| 8 | style_id | int | int | -- | Стиль напитка (ссылка) | + |
+| 9 | density | varchar | double(4,2) | Число с точность до сотых долей, не превышающее 100 | Плотность напитка | - |
+| 10 | fortress | varchar | double(4,2) | Число с точность до сотых долей, не превышающее 100 | Крепость напитка | - |
+| 11 | color | varchar | int | Введен отдельный словарь цветов | Цвет напитка | - |
+| 12 | container_type | varchar | int | Введен отдельный словарь тары | Тип ёмкости | - |
+| 13 | active | bool | bool | -- | Активность товара | - |
+
 ##### Ограничения таблицы `products`
 | Тип ограничения | Название | Поле | Связанная сущность |
 | -- | --- | ----------- | ---- |
