@@ -5,6 +5,7 @@
 
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/DBScheme.png)
 
+```diff
 ## Документация базы данных интернет-магазина крафтового пива
 ## Таблица - `products`
 Содержит информацию о товарах
@@ -24,6 +25,7 @@
 | 11 | color | varchar | <span style="color:green">int</span> | Введен отдельный словарь цветов | Цвет напитка | - |
 | 12 | container_type | varchar | <span style="color:green">int</span> | Введен отдельный словарь тары | Тип ёмкости | - |
 | 13 | active | bool | <span style="color:red">bool</span> | -- | Активность товара | - |
+```
 ##### Ограничения таблицы `products`
 | Тип ограничения | Название | Поле | Связанная сущность |
 | -- | --- | ----------- | ---- |
