@@ -11,19 +11,19 @@
 ##### Колонки таблицы `products`
 | № | Название | Тип данных (старый) | Тип данных (новый) | Причина замены | Описание | Not NULL |
 | -- | --- | ----------- | ----- | ----- | ---- | ---- |
-| 1 | product_id | bigserial | + serial | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
+| 1 | product_id | bigserial | + serial + | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
 | 2 | name | varchar | <span style="color:green">varchar(255)</span> | Точно указываем длину строки | Название товара | + |
 | 3 | description | text | <span style="color:red">text</span> | -- | Описание товара | - |
-| 4 | category_id | int | <span style="color:red">int</span> |  -- |Категория товара (ссылка) | + |
-| 5 | suplier_id | bigint | <span style="color:green">int</span> | Поставщик товара (ссылка) | Нет необходимости брать настолько большое число | + |
-| 6 | producer_id | int | <span style="color:red">int</span> | Производитель товара (сссылка) | -- | + |
-| 7 | brand_id | int | <span style="color:red">int</span> | Бренд товара (ссылка) | -- | + |
-| 8 | style_id | int | <span style="color:red">int</span> | Стиль напитка (ссылка) | -- | + |
-| 9 | density | varchar | <span style="color:green">double(4,2)</span> | Плотность напитка | Число с точность до сотых долей, не превышающее 100 | - |
-| 10 | fortress | varchar | <span style="color:green">double(4,2)</span> | Крепость напитка |Число с точность до сотых долей, не превышающее 100 | - |
-| 11 | color | varchar | <span style="color:green">int</span> | Цвет напитка | Введен отдельный словарь цветов | - |
-| 12 | container_type | varchar | <span style="color:green">int</span> | Тип ёмкости | Введен отдельный словарь тары | - |
-| 13 | active | bool | <span style="color:red">bool</span> | Активность товара | -- | - |
+| 4 | category_id | int | <span style="color:red">int</span> | -- |Категория товара (ссылка) | + |
+| 5 | suplier_id | bigint | <span style="color:green">int</span> | Нет необходимости брать настолько большое число | Поставщик товара (ссылка) | + |
+| 6 | producer_id | int | <span style="color:red">int</span> | -- | Производитель товара (сссылка) | + |
+| 7 | brand_id | int | <span style="color:red">int</span> | -- | Бренд товара (ссылка) | + |
+| 8 | style_id | int | <span style="color:red">int</span> | -- | Стиль напитка (ссылка) | + |
+| 9 | density | varchar | <span style="color:green">double(4,2)</span> | Число с точность до сотых долей, не превышающее 100 | Плотность напитка | - |
+| 10 | fortress | varchar | <span style="color:green">double(4,2)</span> | Число с точность до сотых долей, не превышающее 100 | Крепость напитка | - |
+| 11 | color | varchar | <span style="color:green">int</span> | Введен отдельный словарь цветов | Цвет напитка | - |
+| 12 | container_type | varchar | <span style="color:green">int</span> | Введен отдельный словарь тары | Тип ёмкости | - |
+| 13 | active | bool | <span style="color:red">bool</span> | -- | Активность товара | - |
 ##### Ограничения таблицы `products`
 | Тип ограничения | Название | Поле | Связанная сущность |
 | -- | --- | ----------- | ---- |
