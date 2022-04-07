@@ -11,7 +11,7 @@
 ##### Колонки таблицы `products`
 | № | Название | Тип данных (старый) | Тип данных (новый) | Причина замены | Описание | Not NULL |
 | -- | --- | ----------- | ----- | ----- | ---- | ---- |
-| 1 | product_id | bigserial | <span style="color:green">serial</span> | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
+| 1 | product_id | bigserial | + serial | Нет необходимости брать настолько большое число | ID товара (Primary key) | + |
 | 2 | name | varchar | <span style="color:green">varchar(255)</span> | Точно указываем длину строки | Название товара | + |
 | 3 | description | text | <span style="color:red">text</span> | -- | Описание товара | - |
 | 4 | category_id | int | <span style="color:red">int</span> |  -- |Категория товара (ссылка) | + |
