@@ -34,7 +34,7 @@
 | 2 | name | varchar | varchar(255) | Точно указываем длину строки |Название поставщика | + |
 | 3 | address_id | int | int | -- | Адрес поставщика (ссылка) | + |
 | 4 | description | text | text | -- | Описание поставщика | - |
-| 5 | contacts | -- | JSON | Замена на JSON  | Контакты поставщика | - |
+| 5 | contacts | -- | JSON | Новая колонка  | Контакты поставщика | - |
 | - | Удалены | -- | -- | -- | -- | -- |
 | 5 | email | varchar | text | Замена на JSON | Email поставщика (Unique key) | + |
 | 6 | main_phone | varchar | text | Замена на JSON | Основной телефон поставщика | + |
