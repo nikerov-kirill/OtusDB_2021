@@ -25,16 +25,6 @@
 | 12 | container_type | varchar | int | Введен отдельный словарь тары | Тип ёмкости | - |
 | 13 | active | bool | bool | -- | Активность товара | - |
 
-##### Ограничения таблицы `products`
-| Тип ограничения | Название | Поле | Связанная сущность |
-| -- | --- | ----------- | ---- |
-| PRIMARY KEY | products_pk | product_id | |
-| FOREIGN KEY | products_fk | category_id | `categories` |
-| FOREIGN KEY | products_fk_1 | suplier_id | `supliers` |
-| FOREIGN KEY | products_fk_2 | producer_id | `producers` |
-| FOREIGN KEY | products_fk_4 | brand_id | `brands` |
-| FOREIGN KEY | products_fk_5 | style_id | `styles` |
-
 ## Таблица - `categories`
 Содержит информацию о категориях товаров
 ##### Колонки таблицы `categories`
