@@ -25,38 +25,22 @@
 | 12 | container_type | varchar | int | Введен отдельный словарь тары | Тип ёмкости | - |
 | 13 | active | bool | bool | -- | Активность товара | - |
 
-## Таблица - `categories`
-Содержит информацию о категориях товаров
-##### Колонки таблицы `categories`
-| № | Название | Тип данных | Описание | Not NULL |
-| -- | --- | ----------- | ----- | ----- |
-| 1 | category_id | serial | ID категории (Primary key) | + |
-| 2 | name | varchar | Название категории | + |
-| 3 | description | text | Описание категории | - |
-| 4 | active | bool | Активность категории | + |
-##### Ограничения таблицы `categories`
-| Тип ограничения | Название | Поле | Связанная сущность |
-| -- | --- | ----------- | ---- |
-| PRIMARY KEY | categories_pk | category_id | |
-
 ## Таблица - `supliers`
 Содержит информацию о поставщиках
 ##### Колонки таблицы `supliers`
-| № | Название | Тип данных | Описание | Not NULL |
-| -- | --- | ----------- | ----- | ----- |
-| 1 | suplier_id | bigserial | ID поставщика (Primary key) | + |
-| 2 | name | varchar | Название поставщика | + |
-| 3 | address_id | int | Адрес поставщика (ссылка) | + |
-| 4 | description | text | Описание поставщика | - |
-| 5 | email | varchar | Email поставщика (Unique key) | + |
-| 6 | main_phone | varchar | Основной телефон поставщика | + |
-| 7 | additional_phone | varchar | Дополнительный телефон поставщика | - |
-##### Ограничения таблицы `supliers`
-| Тип ограничения | Название | Поле | Связанная сущность |
-| -- | --- | ----------- | ---- |
-| PRIMARY KEY | supliers_pk | suplier_id | |
-| UNIQUE KEY | supliers_un | email | |
-| FOREIGN KEY | supliers_fk | address_id | `addresses` |
+| № | Название | Тип данных (старый) | Тип данных (новый) | Причина замены | Описание | Not NULL |
+| -- | --- | ----------- | ----- | ----- | ---- | ---- |
+| 1 | suplier_id | bigserial | serial | Нет необходимости брать настолько большое число | ID поставщика (Primary key) | + |
+| 2 | name | varchar | varchar(255) | Точно указываем длину строки |Название поставщика | + |
+| 3 | address_id | int | int | -- | Адрес поставщика (ссылка) | + |
+| 4 | description | text | text | -- | Описание поставщика | - |
+| 5 | contacts | -- | JSON | Замена на JSON  | Контакты поставщика | - |
+
+`Колонки удалены`
+| 5 | email | varchar | text | Замена на JSON | Email поставщика (Unique key) | + |
+| 6 | main_phone | varchar | text | Замена на JSON | Основной телефон поставщика | + |
+| 7 | additional_phone | varchar | text | Замена на JSON  | Дополнительный телефон поставщика | - |
+
 
 ## Таблица - `producers`
 Содержит информацию о производителях
