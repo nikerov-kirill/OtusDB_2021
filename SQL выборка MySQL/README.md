@@ -11,4 +11,5 @@
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/SQL%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20MySQL/Screenshot_4.png)
 - Выбираем всех сотрудников у которых в должности есть 'Designer'  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/SQL%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20MySQL/Screenshot_5.png)  
-- 
+- Вместе джойна с таблицей `address` можно сделать условие `WHERE EXISTS` с подзапросом. По итогу мы выбираем всех сотрудников, проживающих в San Francisco  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/SQL%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20MySQL/Screenshot_7.png)
