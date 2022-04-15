@@ -11,3 +11,7 @@
 - Таблица `product_2`  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A2%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20MySQL/product_2.png)  
 #### 2. Загрузить данные из приложенных в материалах csv. Реализовать следующими путями:  
+Создаём таблицу  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A2%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20MySQL/Screenshot_1.png)  
+Загружаем данные из файла в таблицу  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A2%D1%80%D0%B0%D0%BD%D0%B7%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20MySQL/Screenshot_2.png)
