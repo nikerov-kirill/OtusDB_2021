@@ -13,9 +13,9 @@
  План выполнения запроса показывает, что индекс используется  
  ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20MySQL/Screenshot_3.png)  
  Так же наблюдаются различия в выборках при использовании модов  
- NATURAL LANGUAGE MODE  
+ ###### NATURAL LANGUAGE MODE  
  ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20MySQL/Screenshot_4.png)  
- QUERY EXPANSION  
+ ###### QUERY EXPANSION  
  ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%98%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D1%8B%20MySQL/Screenshot_5.png)
  
  
