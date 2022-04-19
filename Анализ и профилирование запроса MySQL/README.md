@@ -22,5 +22,5 @@
 На основании данного плана, можно увидеть, что самыми тяжелыми явлется чтение индекса `my_fk_47` таблицы `salesorderdetail` и обработка результирующего набора строк после объединения таблиц.
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B8%20%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20MySQL/Screenshot_3.png)  
 
-При выводе EXPLIAN FORMAT=JSON, увидим результат, аналогичный FORMAT=TREE, но в формате JSON. Как по мне, понять по нему что-либо очень сложно, по дереву ориентироваться легче.
+При выводе EXPLIAN FORMAT=JSON, увидим результат, аналогичный FORMAT=TREE, но в формате JSON. Как по мне, понять по нему что-либо очень сложно, по дереву ориентироваться легче.  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B8%20%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D0%B0%20MySQL/Screenshot_4.png)
