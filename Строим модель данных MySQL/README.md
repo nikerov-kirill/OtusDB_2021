@@ -64,3 +64,6 @@
 | PRIMARY KEY | pk_country | id | |
 | FOREIGN KEY | fk_address_city | city_id | `cities` |
 | FOREIGN KEY | fk_address_country | country_id | `countries` |
+
+### DDL
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D0%BC%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20MySQL/Screenshot_1.png)
