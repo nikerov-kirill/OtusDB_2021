@@ -12,3 +12,11 @@
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20mongodb/Screenshot_1.png)  
 - mongosh  
 ![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20mongodb/Screenshot_2.png)  
+##### 2. Заполнить данными  
+Подключаемся к базе `otus`  
+- use otus;  
+Создаем коллекцию `my_collection`  
+- db.createCollection("my_collection");  
+Выходим из базы и загружаем датасет  
+- mongoimport --db otus --collection my_collection < companies.json  
+![](https://github.com/nikerov-kirill/OtusDB_2021/blob/master/%D0%91%D0%B0%D0%B7%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20mongodb/Screenshot_3.png)  
